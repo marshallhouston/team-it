@@ -1,0 +1,15 @@
+.team-card {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  border: 1px solid blue;
+  margin-bottom: 2px;
+}
+
+.team-name {
+  padding-left: 10px;
+}
+
+.team-phone {
+  padding-right: 10px;
+}
