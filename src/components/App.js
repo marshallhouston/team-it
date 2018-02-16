@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom'
 import TeamList from './TeamList'
+import Team from './Team'
 
-// right now, teams will be mocked data.... will need to get this info from the API based on the user... grab all their teams
+// team info hardcoded right now, will hit API to gather all team info
 class App extends Component {
   constructor() {
     super()
@@ -14,7 +16,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1> Welcome to Team It! </h1>
-        <TeamList teams={ this.state.teams }/>
+        <Switch>
+          <Route exact path='/' render={()=><TeamList teams={this.state.teams}/>}/>
+          <Route path='/teams/:id' component={ Team }/>
+        </Switch>
       </div>
     );
   }
