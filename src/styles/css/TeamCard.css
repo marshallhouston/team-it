@@ -1,9 +1,14 @@
 .team-card {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 500px;
-  border: 1px solid blue;
-  margin-bottom: 2px; }
+  border: 1px solid #383F51;
+  margin-bottom: 2px;
+  background-color: azure; }
+  .team-card a {
+    color: #383F51;
+    font-size: 12px;
+    width: 500px; }
 
 .team-name {
   padding-left: 10px; }
