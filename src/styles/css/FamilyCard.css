@@ -1,7 +1,10 @@
 .family-card {
   display: flex;
   justify-content: space-around;
-  width: 600px;
+  align-items: center;
+  width: 700px;
   border: 1px solid #383F51; }
+  .family-card .family-details-container {
+    width: 150px; }
 
 /*# sourceMappingURL=FamilyCard.css.map */

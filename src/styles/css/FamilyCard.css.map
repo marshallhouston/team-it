@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,YAAa;EACX,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;EAC7B,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,iBAAiB",
+"mappings": "AAAA,YAAa;EACX,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;EAC7B,WAAW,EAAE,MAAM;EACnB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,iBAAiB;EAEzB,sCAA0B;IACxB,KAAK,EAAE,KAAK",
 "sources": ["../scss/FamilyCard.scss"],
 "names": [],
 "file": "FamilyCard.css"
