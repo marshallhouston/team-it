@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TeamInfo from './TeamInfo'
 import FamilyList from './FamilyList'
+import NewFamilyForm from './NewFamilyForm'
 
 class Team extends Component {
   constructor(props) {
@@ -12,11 +13,16 @@ class Team extends Component {
     }
   }
 
+  updateFamilies = (name, phone, email) => {
+    this.setState({ families: [...this.state.families, { name, phone, email }] })
+  }
+
   render() {
     return (
       <div className="team">
         <TeamInfo teamInfo={ this.state.teamInfo }/>
         <FamilyList families={ this.state.families }/>
+        <NewFamilyForm updateFamilies={ this.updateFamilies }/>
       </div>
     )
   }
