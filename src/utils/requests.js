@@ -57,7 +57,28 @@ const followerInfo = (user) => {
   }
 }
 
+const postFollowerHeaders = (name, phone, email) => {
+  return {
+    method: `POST`,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      follower: {
+        name: name,
+        phone: phone,
+        email: email
+      }
+    })
+  }
+}
+
+const addFollowers = (teamId, name, phone, email) => {
+  return fetch(`${baseURL}/api/v1/teams/${teamId}/followers`, postFollowerHeaders(name, phone, email))
+    .then((response) => handleResponse(response))
+    .catch((error) => console.error({ error }))
+}
+
 module.exports = {
   getTeams,
   getTeamDetails,
+  addFollowers,
 }
