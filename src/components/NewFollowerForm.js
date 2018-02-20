@@ -20,6 +20,7 @@ class NewFollowerForm extends Component {
     const name = this.state.name
     const phone = this.state.phone
     const email = this.state.email
+    const teamId = this.props.teamId
 
     addFollowers(teamId, name, phone, email)
       .then(() => this.props.updateFollowers(name, phone, email))

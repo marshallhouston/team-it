@@ -33,7 +33,10 @@ class Team extends Component {
       <div className="team">
         <TeamInfo teamInfo={ this.state.teamInfo }/>
         <FollowerList followers={ this.state.followers }/>
-        <NewFollowerForm updateFollowers={ this.updateFollowers }/>
+        <NewFollowerForm
+          updateFollowers={ this.updateFollowers }
+          teamId={ this.state.teamId }
+        />
       </div>
     )
   }
