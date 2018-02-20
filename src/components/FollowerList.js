@@ -5,7 +5,7 @@ const createFollowerCards = (followers) => {
   return followers.map(follower => {
     return (
       <FollowerCard
-        key={ follower.id }
+        key={ follower.name + follower.id }
         follower= { follower }
       />
     )
