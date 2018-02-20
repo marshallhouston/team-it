@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class NewFamilyForm extends Component {
+class NewFollowerForm extends Component {
   constructor() {
     super()
     this.state = {
@@ -10,18 +10,18 @@ class NewFamilyForm extends Component {
     }
   }
 
-  updateFamilyInfo = (key, event) => {
+  updateFollowerInfo = (key, event) => {
     this.setState({ [key]: event.target.value})
   }
 
-  addFamily = (event) => {
+  addFollower = (event) => {
     event.preventDefault()
     const name = this.state.name
     const phone = this.state.phone
     const email = this.state.email
 
     // send this info with a post request to the backend.
-    this.props.updateFamilies(name, phone, email)
+    this.props.updateFollowers(name, phone, email)
 
     // reset the state of the form if the post is successful. otherwise keep the info and have some error message?
     this.setState({ name: '', phone: '', email: '' })
@@ -30,35 +30,35 @@ class NewFamilyForm extends Component {
   render() {
     return (
       <div className="form-container">
-        <form className="new-family-form">
-          <div className="form-input new-family-name">
+        <form className="new-follower-form">
+          <div className="form-input new-follower-name">
             <input
               type="text"
               placeholder="Name"
               value={ this.state.name }
-              onChange={ this.updateFamilyInfo.bind(this, 'name') }
+              onChange={ this.updateFollowerInfo.bind(this, 'name') }
             />
           </div>
-          <div className="form-input new-family-phone">
+          <div className="form-input new-follower-phone">
             <input
               type="tel"
               placeholder="555-555-5555"
               value={ this.state.phone }
-              onChange={ this.updateFamilyInfo.bind(this, 'phone') }
+              onChange={ this.updateFollowerInfo.bind(this, 'phone') }
             />
           </div>
-          <div className="form-input new-family-email">
+          <div className="form-input new-follower-email">
             <input
               type="email"
               placeholder="example@example.com"
               value={ this.state.email }
-              onChange={ this.updateFamilyInfo.bind(this, 'email') }
+              onChange={ this.updateFollowerInfo.bind(this, 'email') }
             />
           </div>
           <div className="button">
             <button
               type="submit"
-              onClick={ this.addFamily }
+              onClick={ this.addFollower }
             >
               Add
             </button>
@@ -69,4 +69,4 @@ class NewFamilyForm extends Component {
   }
 }
 
-export default NewFamilyForm
+export default NewFollowerForm

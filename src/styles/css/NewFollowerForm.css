@@ -1,20 +1,20 @@
-.new-family-form {
+.new-follower-form {
   height: 75px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   border: 1px solid #383F51; }
-  .new-family-form .form-input input {
+  .new-follower-form .form-input input {
     width: 175px;
     height: 30px;
     font-size: 12px; }
-  .new-family-form button {
+  .new-follower-form button {
     width: 50px;
     height: 35px;
     background-color: #383F51;
     color: white;
     border-radius: 8px; }
-    .new-family-form button:hover {
+    .new-follower-form button:hover {
       background-color: #6e7a9b; }
 
-/*# sourceMappingURL=NewFamilyForm.css.map */
+/*# sourceMappingURL=NewFollowerForm.css.map */

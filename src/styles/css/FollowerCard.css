@@ -1,10 +1,10 @@
-.family-card {
+.follower-card {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 700px;
   border: 1px solid #383F51; }
-  .family-card .family-details-container {
+  .follower-card .follower-details-container {
     width: 150px; }
 
-/*# sourceMappingURL=FamilyCard.css.map */
+/*# sourceMappingURL=FollowerCard.css.map */

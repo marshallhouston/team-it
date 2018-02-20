@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,cAAe;EACb,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;EAC7B,WAAW,EAAE,MAAM;EACnB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,iBAAiB;EAEzB,0CAA4B;IAC1B,KAAK,EAAE,KAAK",
+"sources": ["../scss/FollowerCard.scss"],
+"names": [],
+"file": "FollowerCard.css"
+}
