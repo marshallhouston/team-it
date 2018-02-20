@@ -8,8 +8,8 @@ class Team extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      teamInfo: {id: 1, name: "Westwood Soccer", phone: "555-555-5555"},
-      followers: [{id: 2, name: "Amy Raymond", phone: "555-555-5555", email: "amy@parent.com"}, {id: 3, name: "Greg McGee", phone: "555-555-5555", email: "greg@parent.com"}],
+      teamInfo: {},
+      followers: [],
       teamId: parseInt(props.match.params.id, 10)
     }
   }
