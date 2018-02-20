@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { addFollowers } from '../utils/requests'
 
 class NewFollowerForm extends Component {
   constructor() {
@@ -20,10 +21,10 @@ class NewFollowerForm extends Component {
     const phone = this.state.phone
     const email = this.state.email
 
-    // send this info with a post request to the backend.
-    this.props.updateFollowers(name, phone, email)
+    addFollowers(teamId, name, phone, email)
+      .then(() => this.props.updateFollowers(name, phone, email))
+      .catch(error => console.error(error))
 
-    // reset the state of the form if the post is successful. otherwise keep the info and have some error message?
     this.setState({ name: '', phone: '', email: '' })
   }
 
