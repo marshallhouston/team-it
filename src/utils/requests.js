@@ -30,8 +30,39 @@ const formatTeams = (teamData) => {
       phone: team.attributes.phone
     }
   })
+
+const getTeamDetails = (teamId) => {
+  return fetch(`${baseURL}/api/v1/teams/${teamId}`)
+    .then((response) => handleResponse(response))
+    .then(teamDetails => formatTeamDetails(teamDetails))
+    .catch((error) => console.error({ error }))
+}
+
+const formatTeamDetails = (teamDetails) => {
+  const finalDetails = {}
+  finalDetails.teamInfo = teamInfo(teamDetails.data)
+  finalDetails.followers = teamDetails.included.map(user => followerInfo(user))
+  return finalDetails
+}
+
+const teamInfo = (teamData) => {
+  return {
+    id: teamData.id,
+    name: teamData.attributes.name,
+    phone: teamData.attributes.phone
+  }
+}
+
+const followerInfo = (user) => {
+  return {
+    id: user.id,
+    name: user.attributes.name,
+    phone: user.attributes.phone,
+    email: user.attributes.email
+  }
 }
 
 module.exports = {
   getTeams,
+  getTeamDetails,
 }
