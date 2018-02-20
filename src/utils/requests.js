@@ -23,13 +23,8 @@ const getTeams = () => {
 }
 
 const formatTeams = (teamData) => {
-  return teamData.data.map(team => {
-    return {
-      id: team.id,
-      name: team.attributes.name,
-      phone: team.attributes.phone
-    }
-  })
+  return teamData.data.map(team => teamInfo(team))
+}
 
 const getTeamDetails = (teamId) => {
   return fetch(`${baseURL}/api/v1/teams/${teamId}`)
