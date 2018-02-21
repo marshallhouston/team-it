@@ -15,13 +15,13 @@ class Team extends Component {
   }
 
   componentDidMount() {
-  const teamId = this.state.teamId
-  getTeamDetails(teamId)
-    .then(teamDetails => this.setState({
-      teamInfo: teamDetails.teamInfo,
-      followers: teamDetails.followers
-    }))
-    .catch(error => console.error({ error }))
+    const teamId = this.state.teamId
+    getTeamDetails(teamId)
+      .then(teamDetails => this.setState({
+        teamInfo: teamDetails.teamInfo,
+        followers: teamDetails.followers
+      }))
+      .catch(error => console.error({ error }))
   }
 
   updateFollowers = (name, phone, email) => {

@@ -12,7 +12,7 @@ class NewFollowerForm extends Component {
   }
 
   updateFollowerInfo = (key, event) => {
-    this.setState({ [key]: event.target.value})
+    this.setState({ [key]: event.target.value })
   }
 
   addFollower = (event) => {
