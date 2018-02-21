@@ -1,0 +1,21 @@
+.new-team-form {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #383F51;
+  background-color: azure; }
+  .new-team-form .form-input input {
+    width: 300px;
+    height: 40px;
+    font-size: 18px; }
+  .new-team-form button {
+    width: 100px;
+    height: 35px;
+    background-color: #383F51;
+    color: white;
+    border-radius: 8px; }
+    .new-team-form button:hover {
+      background-color: #6e7a9b; }
+
+/*# sourceMappingURL=NewTeamForm.css.map */
