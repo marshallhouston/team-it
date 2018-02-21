@@ -2,28 +2,15 @@ import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import TeamList from './TeamList'
 import Team from './Team'
-import { getTeams } from '../utils/requests'
+import Welcome from './Welcome'
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      teams: []
-    }
-  }
-
-  componentDidMount() {
-  getTeams()
-    .then((teams) => this.setState({ teams }))
-    .catch((error) => console.error({ error }))
-  }
-
   render() {
     return (
       <div className="App">
-        <h1> Welcome to Team It! </h1>
         <Switch>
-          <Route exact path='/' render={()=><TeamList teams={this.state.teams}/>}/>
+          <Route exact path='/' component={ Welcome }/>
+          <Route exact path='/teams' component = { TeamList }/>
           <Route path='/teams/:id' component={ Team }/>
         </Switch>
       </div>
@@ -31,4 +18,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
