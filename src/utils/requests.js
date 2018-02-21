@@ -77,8 +77,25 @@ const addFollowers = (teamId, name, phone, email) => {
     .catch((error) => console.error({ error }))
 }
 
+const postTeamHeaders = (name) => {
+  return {
+    method: `POST`,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      team: { name: name }
+    })
+  }
+}
+
+const createTeam = (name) => {
+  return fetch(`${baseURL}/api/v1/teams`, postTeamHeaders(name))
+    .then(response => handleResponse(response))
+    .catch(error => console.error({ error }))
+}
+
 module.exports = {
   getTeams,
   getTeamDetails,
   addFollowers,
+  createTeam,
 }
