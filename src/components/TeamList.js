@@ -28,8 +28,10 @@ class TeamList extends Component {
       .catch((error) => console.error({ error }))
   }
 
-  updateTeams = (name, phone) => {
-    this.setState({ teams: [...this.state.teams, { name, phone }] })
+  updateTeams = (name, teamInfo) => {
+    const id = teamInfo.id
+    const phone = teamInfo.phone
+    this.setState({ teams: [...this.state.teams, { id, name, phone }] })
   }
 
   render() {

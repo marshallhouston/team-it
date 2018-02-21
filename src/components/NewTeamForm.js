@@ -19,9 +19,12 @@ class NewTeamForm extends Component {
 
     createTeam(name)
       .then(response => {
-        return response.data.attributes.phone
+        return {
+          phone: response.data.attributes.phone,
+          id: response.data.id
+        }
       })
-      .then(teamPhone => this.props.updateTeams(name, teamPhone))
+      .then(teamInfo => this.props.updateTeams(name, teamInfo))
       .catch(error => console.error(error))
 
     this.setState({ name: '' })
