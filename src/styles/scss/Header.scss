@@ -1,0 +1,30 @@
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+
+  .nav-bar-item {
+    display: flex;
+    justify-content: center;
+    padding: 15px 25px 0px 15px;
+    width: 100px;
+    &:hover {
+      background-color: azure;
+    }
+
+    .nav-bar-link {
+      color: #383F51;
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: normal;
+      height: 100px;
+      &:hover {
+        color: black;
+        background-color: azure;
+      }
+
+    }
+  }
+
+}

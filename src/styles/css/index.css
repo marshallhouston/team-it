@@ -15,6 +15,28 @@ a {
 a:hover {
   background-color: #71ffff; }
 
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px; }
+  .nav-bar .nav-bar-item {
+    display: flex;
+    justify-content: center;
+    padding: 15px 25px 0px 15px;
+    width: 100px; }
+    .nav-bar .nav-bar-item:hover {
+      background-color: azure; }
+    .nav-bar .nav-bar-item .nav-bar-link {
+      color: #383F51;
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: normal;
+      height: 100px; }
+      .nav-bar .nav-bar-item .nav-bar-link:hover {
+        color: black;
+        background-color: azure; }
+
 .team-card {
   display: flex;
   justify-content: center;
