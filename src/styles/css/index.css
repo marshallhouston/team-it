@@ -40,7 +40,7 @@ a:hover {
 .team-card {
   display: flex;
   justify-content: center;
-  width: 500px;
+  width: 750px;
   height: 100px;
   border: 1px solid #383F51;
   margin-bottom: 2px;
@@ -48,25 +48,26 @@ a:hover {
   .team-card a {
     color: #383F51;
     font-size: 12px;
-    width: 500px; }
+    width: 750px; }
 
 .team-name {
   padding-left: 10px; }
 
-.team-phone {
+.team-code {
   padding-right: 10px; }
 
 .team-info {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid #383F51; }
+  border: 1px solid #383F51;
+  width: 750px; }
 
 .follower-card {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 700px;
+  width: 750px;
   border: 1px solid #383F51; }
   .follower-card .follower-details-container {
     width: 150px; }
@@ -96,7 +97,8 @@ a:hover {
   justify-content: space-around;
   align-items: center;
   border: 1px solid #383F51;
-  background-color: azure; }
+  background-color: azure;
+  width: 750px; }
   .new-team-form .form-input input {
     width: 300px;
     height: 40px;

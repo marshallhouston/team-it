@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,UAAW;EACT,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;EAC7B,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,iBAAiB",
+"mappings": "AAAA,UAAW;EACT,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;EAC7B,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,iBAAiB;EACzB,KAAK,EAAE,KAAK",
 "sources": ["../scss/TeamInfo.scss"],
 "names": [],
 "file": "TeamInfo.css"

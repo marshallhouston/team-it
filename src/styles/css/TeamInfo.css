@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid #383F51; }
+  border: 1px solid #383F51;
+  width: 750px; }
 
 /*# sourceMappingURL=TeamInfo.css.map */
