@@ -30,8 +30,8 @@ class TeamList extends Component {
 
   updateTeams = (name, teamInfo) => {
     const id = teamInfo.id
-    const phone = teamInfo.phone
-    this.setState({ teams: [...this.state.teams, { id, name, phone }] })
+    const teamCode = teamInfo.team_code
+    this.setState({ teams: [...this.state.teams, { id, name, teamCode }] })
   }
 
   render() {

@@ -44,7 +44,7 @@ const teamInfo = (teamData) => {
   return {
     id: teamData.id,
     name: teamData.attributes.name,
-    phone: teamData.attributes.phone
+    teamCode: teamData.attributes.team_code
   }
 }
 

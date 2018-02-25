@@ -20,7 +20,7 @@ class NewTeamForm extends Component {
     createTeam(name)
       .then(response => {
         return {
-          phone: response.data.attributes.phone,
+          teamCode: response.data.attributes.team_code,
           id: response.data.id
         }
       })

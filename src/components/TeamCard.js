@@ -6,7 +6,7 @@ const TeamCard = ({ team } ) => {
       <div className="team-card">
         <Link to={`/teams/${team.id}`}>
         <h2 className="team-name"> { team.name }</h2>
-        <h2 className="team-phone"> { team.phone }</h2>
+        <h2 className="team-code"> Team Code: { team.teamCode }</h2>
         </Link>
       </div>
   )
