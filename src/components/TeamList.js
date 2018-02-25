@@ -37,11 +37,11 @@ class TeamList extends Component {
   render() {
     return (
       <div className="teams-list">
-        <h2>Your Teams</h2>
-        { createTeamCards(this.state.teams) }
+        <h2>Teams</h2>
         <NewTeamForm
           updateTeams={ this.updateTeams }
         />
+        { createTeamCards(this.state.teams) }
       </div>
     )
   }
