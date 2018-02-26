@@ -1,4 +1,5 @@
 import React from 'react'
+import formatPhone from '../utils/formatPhone'
 
 const FollowerCard = ({ follower }) => {
   return (
@@ -7,7 +8,7 @@ const FollowerCard = ({ follower }) => {
         <p className="follower-name">{ follower.name }</p>
       </div>
       <div className="follower-details-container">
-        <p className="follower-phone">{ follower.phone }</p>
+        <p className="follower-phone">{ formatPhone(follower.phone) }</p>
       </div>
       <div className="follower-details-container">
         <p className="follower-email">{ follower.email }</p>
