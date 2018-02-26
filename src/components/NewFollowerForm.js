@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { addFollowers } from '../utils/requests'
+import validateInputs from '../utils/validateInputs'
 
 class NewFollowerForm extends Component {
   constructor() {
@@ -20,16 +21,21 @@ class NewFollowerForm extends Component {
     const name = this.state.name
     const phone = this.state.phone
     const email = this.state.email
-    const teamId = this.props.teamId
 
-    addFollowers(teamId, name, phone, email)
-      .then(() => this.props.updateFollowers(name, phone, email))
-      .catch(error => console.error(error))
+    const validCheck = validateInputs(name, phone, email)
+    const allValid = Object.keys(validCheck).every(x => validCheck[x])
+
+    if (allValid) {
+      const teamId = this.props.teamId
+      addFollowers(teamId, name, phone, email)
+        .then(() => this.props.updateFollowers(name, phone, email))
+        .catch(error => console.error(error))
 
     this.setState({ name: '', phone: '', email: '' })
   }
 
   render() {
+    const validStatuses = validateInputs(this.state.name, this.state.phone, this.state.email)
     return (
       <div className="form-container">
         <form className="new-follower-form">
