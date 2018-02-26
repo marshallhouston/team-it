@@ -1,0 +1,19 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #383F51;
+  border-radius: 5px;
+  width: 750px;
+  background: #C9CEBD;
+
+  .welcome-text {
+    p {
+      padding: 10px;
+    }
+    padding-bottom: 15px;
+  }
+
+  .message-image {
+    width: 250px;
+  }
+}

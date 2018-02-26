@@ -6,7 +6,8 @@
   border: 1px solid #383F51;
   background-color: azure;
   width: 750px;
-  margin-bottom: 2px; }
+  margin-bottom: 2px;
+  border-radius: 5px; }
   .new-team-form .form-input input {
     width: 300px;
     height: 40px;

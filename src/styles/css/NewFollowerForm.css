@@ -3,7 +3,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid #383F51; }
+  border: 1px solid #383F51;
+  border-radius: 5px; }
   .new-follower-form .form-input input {
     width: 175px;
     height: 30px;

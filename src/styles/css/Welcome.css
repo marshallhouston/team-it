@@ -1,0 +1,15 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #383F51;
+  border-radius: 5px;
+  width: 750px;
+  background: #C9CEBD; }
+  .welcome .welcome-text {
+    padding-bottom: 15px; }
+    .welcome .welcome-text p {
+      padding: 10px; }
+  .welcome .message-image {
+    width: 250px; }
+
+/*# sourceMappingURL=Welcome.css.map */
