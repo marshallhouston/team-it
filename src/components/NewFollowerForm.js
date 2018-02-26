@@ -8,12 +8,23 @@ class NewFollowerForm extends Component {
     this.state = {
       name: '',
       phone: '',
-      email: ''
+      email: '',
+      focused: {
+        name: false,
+        phone: false,
+        email: false,
+      }
     }
   }
 
   updateFollowerInfo = (key, event) => {
     this.setState({ [key]: event.target.value })
+  }
+
+  handleBlur = (key) => (event) => {
+    this.setState({
+      focused: { ...this.state.focused, [key]: true },
+    })
   }
 
   addFollower = (event) => {
@@ -31,16 +42,30 @@ class NewFollowerForm extends Component {
         .then(() => this.props.updateFollowers(name, phone, email))
         .catch(error => console.error(error))
 
-    this.setState({ name: '', phone: '', email: '' })
+      this.setState({ name: '', phone: '', email: '', focused: {
+          name: false,
+          phone: false,
+          email: false,
+        }
+      })
+    }
   }
 
   render() {
     const validStatuses = validateInputs(this.state.name, this.state.phone, this.state.email)
+    const shouldShowError = (key) => {
+      const validStatus = validStatuses[key]
+      const shouldShow = this.state.focused[key]
+      return validStatus ? false : shouldShow
+    }
+
     return (
       <div className="form-container">
         <form className="new-follower-form">
           <div className="form-input new-follower-name">
             <input
+              className={shouldShowError('name') ? "error" : ""}
+              onBlur={this.handleBlur('name')}
               type="text"
               placeholder="Name"
               value={ this.state.name }
@@ -49,6 +74,8 @@ class NewFollowerForm extends Component {
           </div>
           <div className="form-input new-follower-phone">
             <input
+              className={shouldShowError('phone') ? "error" : ""}
+              onBlur={this.handleBlur('phone')}
               type="tel"
               placeholder="555-555-5555"
               value={ this.state.phone }
@@ -57,8 +84,10 @@ class NewFollowerForm extends Component {
           </div>
           <div className="form-input new-follower-email">
             <input
+              className={shouldShowError('email') ? "error" : ""}
+              onBlur={this.handleBlur('email')}
               type="email"
-              placeholder="example@example.com"
+              placeholder="email@email.com"
               value={ this.state.email }
               onChange={ this.updateFollowerInfo.bind(this, 'email') }
             />
