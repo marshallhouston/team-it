@@ -82,6 +82,8 @@ a:hover {
     width: 175px;
     height: 30px;
     font-size: 12px; }
+  .new-follower-form .form-input .error {
+    border: 1px solid red; }
   .new-follower-form button {
     width: 50px;
     height: 35px;
