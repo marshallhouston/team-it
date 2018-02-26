@@ -8,7 +8,7 @@ const Welcome = () => {
         <h3>How it Works</h3>
         <div className="welcome-text">
           <p>Send a text message to 1-205-639-0334 with your team code and message.</p>
-          <img src="/team_it_message.png" alt="Example text message" className="message-image"></img>
+          <img src={require("../img/team_it_message.png")} alt="Example text message" className="message-image"/>
           <p>All the followers of team 880 will receive your message.</p>
           <p>Change the team code to send a message to a different team.</p>
       </div>
