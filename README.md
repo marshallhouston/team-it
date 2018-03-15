@@ -15,3 +15,6 @@ This application is built with React.
 
 ## Live Application
 The web application is hosted at https://marshallhouston.github.io/team-it/.
+
+## Backend API
+The source code for the backend API is found at https://github.com/marshallhouston/team-it-api. This Rails application serves the data for this frontend client.
